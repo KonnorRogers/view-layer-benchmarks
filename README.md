@@ -26,4 +26,4 @@ bundle exec rake benchmark
 
 Benchmarks are for Ruby 3.1.1 and Rails v7.
 
-![Picture of View Layer benchmarks. Order of speed: ViewComponent,Trailblazer Cells, Rails Partials, Dry-View](/assets/benchmark.png)
+![Picture of View Layer benchmarks. Order of speed: ViewComponent,Trailblazer Cells, Rails Partials, Dry-View](/assets/benchmarks.png)
