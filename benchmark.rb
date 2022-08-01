@@ -26,10 +26,15 @@ end
 
 require_relative "./components/name_component"
 require_relative "./components/nested_name_component"
+
 require_relative "./cells/name/cell"
 require_relative "./cells/nested_name/cell"
+
 require_relative "./dry-views/name/view"
 require_relative "./dry-views/nested_name/view"
+
+require_relative "./phlex/phlex_name_component"
+require_relative "./phlex/phlex_nested_name_component"
 
 class BenchmarksController < ActionController::Base
 end
@@ -53,6 +58,7 @@ Benchmark.ips do |x|
   x.report("partials") { controller_view.render("/name", name: "Fox Mulder") }
   x.report("cells") { controller_view.render(html: Name::Cell.new(NameObj.new("Fox Mulder")).()) }
   x.report("dry_view") { controller_view.render(html: Name::View.new.call(name: "Fox Mulder").to_s)  }
+  x.report("phlex") { PhlexNameComponent.new(name: "Fox Mulder").call }
 
   x.compare!
 end
