@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/joeldrapper/phlex.git
+  revision: 417009c55f062bf007007bb6d6da5350483875cc
+  specs:
+    phlex (0.1.0)
+      zeitwerk (~> 2.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,6 +135,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     racc (1.6.0)
@@ -180,6 +189,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-20
 
 DEPENDENCIES
@@ -188,6 +198,7 @@ DEPENDENCIES
   cells-erb (~> 0.1.0)
   cells-rails (~> 0.1.5)
   dry-view
+  phlex!
   rails (~> 7.0.0)
   trailblazer-cells
   view_component (~> 2.62)
