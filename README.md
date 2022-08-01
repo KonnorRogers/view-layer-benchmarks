@@ -1,14 +1,13 @@
 # Purpose
 
 To document performance of ViewComponent, Rails Partials,
-Dry-View, and Trailblazer Cells
+Dry-View, Trailblazer Cells, and Phlex Components.
 
 ## Benchmarks
 
 Benchmarks arent representative of real life and just
 render nested components / partials. Take all numbers with
 a grain of salt.
-
 
 ## Contributing
 
@@ -26,4 +25,4 @@ bundle exec rake benchmark
 
 Benchmarks are for Ruby 3.1.1 and Rails v7.
 
-![Picture of View Layer benchmarks. Order of speed: ViewComponent,Trailblazer Cells, Rails Partials, Dry-View](/assets/benchmarks.png)
+![Picture of View Layer benchmarks](/assets/benchmarks.png)

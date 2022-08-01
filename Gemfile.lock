@@ -139,6 +139,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
+      racc (~> 1.4)
     racc (1.6.0)
     rack (2.2.4)
     rack-test (2.0.2)
@@ -191,6 +193,7 @@ GEM
 PLATFORMS
   arm64-darwin-21
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   benchmark-ips (~> 2.10)
