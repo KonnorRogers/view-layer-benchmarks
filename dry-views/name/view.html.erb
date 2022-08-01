@@ -1,0 +1,7 @@
+<h1>hello <%= name %></h1>
+
+<% view = NestedName::View.new %>
+
+<% 50.times do %>
+  <%= view.call(name: name).to_s %>
+<% end %>
