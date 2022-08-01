@@ -36,6 +36,10 @@ require_relative "./dry-views/nested_name/view"
 require_relative "./phlex/phlex_name_component"
 require_relative "./phlex/phlex_nested_name_component"
 
+require_relative "./templates/template"
+require_relative "./templates/name_template"
+require_relative "./templates/nested_name_template"
+
 class BenchmarksController < ActionController::Base
 end
 
@@ -50,6 +54,8 @@ class NameObj
   end
 end
 
+dry_view = Name::View.new
+
 Benchmark.ips do |x|
   x.time = 10
   x.warmup = 2
@@ -57,8 +63,9 @@ Benchmark.ips do |x|
   x.report("view_component") { controller_view.render(NameComponent.new(name: "Fox Mulder")) }
   x.report("partials") { controller_view.render("/name", name: "Fox Mulder") }
   x.report("cells") { controller_view.render(html: Name::Cell.new(NameObj.new("Fox Mulder")).()) }
-  x.report("dry_view") { controller_view.render(html: Name::View.new.call(name: "Fox Mulder").to_s)  }
+  x.report("dry_view") { controller_view.render(html: dry_view.call(name: "Fox Mulder").to_s)  }
   x.report("phlex") { controller_view.render(html: PhlexNameComponent.new(name: "Fox Mulder").call) }
+  x.report("templates") { controller_view.render(html: NameTemplate.new(name: "Fox Mulder").render) }
 
   x.compare!
 end
