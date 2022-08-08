@@ -23,26 +23,26 @@ bundle install
 bundle exec rake benchmark
 ```
 
-Benchmarks are for Ruby 3.1.1 and Rails v7.
+Benchmarks are for Ruby 3.1.2 and Rails v7.
 
 ```
 Warming up --------------------------------------
-      view_component   546.000  i/100ms
-            partials   253.000  i/100ms
-               cells   361.000  i/100ms
-            dry_view    35.000  i/100ms
-               phlex   553.000  i/100ms
+      view_component   526.000  i/100ms
+            partials   240.000  i/100ms
+               cells   349.000  i/100ms
+            dry_view    34.000  i/100ms
+               phlex   703.000  i/100ms
 Calculating -------------------------------------
-      view_component      5.357k (± 0.2%) i/s -     54.054k in  10.090963s
-            partials      2.516k (± 0.2%) i/s -     25.300k in  10.055975s
-               cells      3.591k (± 0.4%) i/s -     36.100k in  10.053096s
-            dry_view    356.053  (± 0.6%) i/s -      3.570k in  10.026793s
-               phlex      5.475k (± 0.8%) i/s -     55.300k in  10.100898s
+      view_component      5.246k (± 0.7%) i/s -     52.600k in  10.027410s
+            partials      2.407k (± 0.3%) i/s -     24.240k in  10.070509s
+               cells      3.431k (± 0.4%) i/s -     34.551k in  10.069526s
+            dry_view    340.897  (± 0.3%) i/s -      3.434k in  10.073467s
+               phlex      6.943k (± 0.2%) i/s -     69.597k in  10.024142s
 
 Comparison:
-               phlex:     5475.1 i/s
-      view_component:     5356.7 i/s - 1.02x  (± 0.00) slower
-               cells:     3591.0 i/s - 1.52x  (± 0.00) slower
-            partials:     2515.9 i/s - 2.18x  (± 0.00) slower
-            dry_view:      356.1 i/s - 15.38x  (± 0.00) slower
+               phlex:     6943.0 i/s
+      view_component:     5245.9 i/s - 1.32x  (± 0.00) slower
+               cells:     3431.3 i/s - 2.02x  (± 0.00) slower
+            partials:     2407.0 i/s - 2.88x  (± 0.00) slower
+            dry_view:      340.9 i/s - 20.37x  (± 0.00) slower
 ```
