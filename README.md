@@ -25,7 +25,7 @@ bundle exec rake benchmark
 
 Benchmarks are for Ruby 3.1.1 and Rails v7.
 
-```console
+```
 Warming up --------------------------------------
       view_component   546.000  i/100ms
             partials   253.000  i/100ms
