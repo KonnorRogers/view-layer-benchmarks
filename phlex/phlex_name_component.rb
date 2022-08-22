@@ -7,7 +7,7 @@ class PhlexNameComponent < Phlex::Component
     h1 "hello #{@name}"
 
     50.times do
-      component PhlexNestedNameComponent, name: @name
+      render PhlexNestedNameComponent.new(name: @name)
     end
   end
 end
