@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PhlexNestedNameComponent < Phlex::Component
   def initialize(name:)
     super
