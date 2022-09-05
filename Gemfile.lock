@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/joeldrapper/phlex.git
-  revision: 8433edb78199c1d3753597a8e6b7a4f5f0747ff2
+  revision: 950f0e566a372245b3c4301d7d52b4b659f4f878
   specs:
     phlex (0.1.0)
       zeitwerk (~> 2.6)
@@ -182,7 +182,7 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    view_component (2.69.0)
+    view_component (2.71.0)
       activesupport (>= 5.0.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
