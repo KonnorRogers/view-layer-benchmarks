@@ -27,22 +27,22 @@ Benchmarks are for Ruby 3.1.2 and Rails v7.
 
 ```
 Warming up --------------------------------------
-      view_component   541.000  i/100ms
-            partials   252.000  i/100ms
-               cells   355.000  i/100ms
+      view_component   532.000  i/100ms
+            partials   254.000  i/100ms
+               cells   357.000  i/100ms
             dry_view    35.000  i/100ms
-               phlex     1.240k i/100ms
+               phlex     2.724k i/100ms
 Calculating -------------------------------------
-      view_component      5.370k (± 0.3%) i/s -     54.100k in  10.074019s
-            partials      2.515k (± 0.5%) i/s -     25.200k in  10.018925s
-               cells      3.540k (± 0.8%) i/s -     35.500k in  10.029694s
-            dry_view    348.452  (± 0.6%) i/s -      3.500k in  10.044914s
-               phlex     12.279k (± 0.9%) i/s -    124.000k in  10.099450s
+      view_component      5.325k (± 0.3%) i/s -     53.732k in  10.091000s
+            partials      2.534k (± 0.4%) i/s -     25.400k in  10.022917s
+               cells      3.521k (± 0.7%) i/s -     35.343k in  10.037917s
+            dry_view    351.599  (± 0.6%) i/s -      3.535k in  10.054505s
+               phlex     27.062k (± 1.2%) i/s -    272.400k in  10.067337s
 
 Comparison:
-               phlex:    12278.8 i/s
-      view_component:     5370.3 i/s - 2.29x  (± 0.00) slower
-               cells:     3539.7 i/s - 3.47x  (± 0.00) slower
-            partials:     2515.3 i/s - 4.88x  (± 0.00) slower
-            dry_view:      348.5 i/s - 35.24x  (± 0.00) slower
+               phlex:    27061.7 i/s
+      view_component:     5324.8 i/s - 5.08x  (± 0.00) slower
+               cells:     3521.1 i/s - 7.69x  (± 0.00) slower
+            partials:     2534.2 i/s - 10.68x  (± 0.00) slower
+            dry_view:      351.6 i/s - 76.97x  (± 0.00) slower
 ```
