@@ -37,6 +37,8 @@ require_relative "./dry-views/nested_name/view"
 require_relative "./phlex/phlex_name_component"
 require_relative "./phlex/phlex_nested_name_component"
 
+require_relative "./papercraft/pc_test_page"
+
 class BenchmarksController < ActionController::Base
 end
 
@@ -60,6 +62,7 @@ Benchmark.ips do |x|
   x.report("cells") { controller_view.render(html: Name::Cell.new(NameObj.new("Fox Mulder")).()) }
   x.report("dry_view") { controller_view.render(html: Name::View.new.call(name: "Fox Mulder").to_s)  }
   x.report("phlex") { controller_view.render(PhlexNameComponent.new(name: "Fox Mulder")) }
+  x.report("papercraft") { controller_view.render(html: PCTestPage.new.call(name: "Fox Mulder")) }
 
   x.compare!
 end

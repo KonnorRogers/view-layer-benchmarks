@@ -107,10 +107,15 @@ GEM
     erbse (0.1.4)
       temple
     erubi (1.11.0)
+    escape_utils (1.2.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    kramdown (2.3.2)
+      rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -141,6 +146,11 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
+    papercraft (0.24)
+      escape_utils (~> 1.2.1)
+      kramdown (~> 2.3.1)
+      kramdown-parser-gfm (~> 1.1.0)
+      rouge (~> 3.27.0)
     racc (1.6.0)
     rack (2.2.4)
     rack-test (2.0.2)
@@ -172,6 +182,8 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    rexml (3.2.5)
+    rouge (3.27.0)
     strscan (3.0.4)
     temple (0.8.2)
     thor (1.2.1)
@@ -202,6 +214,7 @@ DEPENDENCIES
   cells-erb (~> 0.1.0)
   cells-rails (~> 0.1.5)
   dry-view
+  papercraft
   phlex!
   rails (~> 7.0.0)
   trailblazer-cells
