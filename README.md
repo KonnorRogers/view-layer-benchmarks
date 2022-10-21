@@ -1,7 +1,7 @@
 # Purpose
 
 To document performance of ViewComponent, Rails Partials,
-Dry-View, Trailblazer Cells, and Phlex Components.
+Dry-View, Trailblazer Cells, Papercraft and Phlex Components.
 
 ## Benchmarks
 
@@ -27,22 +27,28 @@ Benchmarks are for Ruby 3.1.2 and Rails v7.
 
 ```
 Warming up --------------------------------------
-      view_component   532.000  i/100ms
-            partials   254.000  i/100ms
-               cells   357.000  i/100ms
-            dry_view    35.000  i/100ms
-               phlex     2.724k i/100ms
+
+      view_component   177.000  i/100ms
+            partials    78.000  i/100ms
+               cells    99.000  i/100ms
+            dry_view    11.000  i/100ms
+               phlex   915.000  i/100ms
+          papercraft   494.000  i/100ms
+
 Calculating -------------------------------------
-      view_component      5.325k (± 0.3%) i/s -     53.732k in  10.091000s
-            partials      2.534k (± 0.4%) i/s -     25.400k in  10.022917s
-               cells      3.521k (± 0.7%) i/s -     35.343k in  10.037917s
-            dry_view    351.599  (± 0.6%) i/s -      3.535k in  10.054505s
-               phlex     27.062k (± 1.2%) i/s -    272.400k in  10.067337s
+
+      view_component      1.709k (± 3.6%) i/s -     17.169k in  10.062967s
+            partials    787.452  (± 4.2%) i/s -      7.878k in  10.022594s
+               cells      1.005k (± 4.4%) i/s -     10.098k in  10.070859s
+            dry_view    112.266  (± 2.7%) i/s -      1.122k in  10.004243s
+               phlex      9.511k (± 3.7%) i/s -     95.160k in  10.020648s
+          papercraft      4.894k (± 3.6%) i/s -     48.906k in  10.007164s
 
 Comparison:
-               phlex:    27061.7 i/s
-      view_component:     5324.8 i/s - 5.08x  (± 0.00) slower
-               cells:     3521.1 i/s - 7.69x  (± 0.00) slower
-            partials:     2534.2 i/s - 10.68x  (± 0.00) slower
-            dry_view:      351.6 i/s - 76.97x  (± 0.00) slower
+               phlex:     9510.9 i/s
+          papercraft:     4893.7 i/s - 1.94x  (± 0.00) slower
+      view_component:     1708.6 i/s - 5.57x  (± 0.00) slower
+               cells:     1004.7 i/s - 9.47x  (± 0.00) slower
+            partials:      787.5 i/s - 12.08x  (± 0.00) slower
+            dry_view:      112.3 i/s - 84.72x  (± 0.00) slower
 ```
