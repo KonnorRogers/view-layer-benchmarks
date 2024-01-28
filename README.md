@@ -23,7 +23,7 @@ bundle install
 bundle exec rake benchmark
 ```
 
-Benchmarks are for Ruby 3.1.2 and Rails v7.
+Benchmarks are for Ruby 3.2.2 and Rails v7.1.
 
 ```
 Warming up --------------------------------------
