@@ -61,7 +61,7 @@ Benchmark.ips do |x|
   x.report("partials") { controller_view.render("/name", name: "Fox Mulder") }
   x.report("cells") { controller_view.render(html: Name::Cell.new(NameObj.new("Fox Mulder")).()) }
   # x.report("dry_view") { controller_view.render(html: Name::View.new.call(name: "Fox Mulder").to_s)  }
-  x.report("phlex") { controller_view.render(PhlexNameComponent.new(name: "Fox Mulder")) }
+  x.report("phlex") { controller_view.render(html: PhlexNameComponent.new(name: "Fox Mulder").call) }
   x.report("papercraft") { controller_view.render(html: PCTestPage.new.call(name: "Fox Mulder")) }
 
   x.compare!
