@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/joeldrapper/phlex.git
-  revision: 950f0e566a372245b3c4301d7d52b4b659f4f878
-  specs:
-    phlex (0.1.0)
-      zeitwerk (~> 2.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -121,7 +114,7 @@ GEM
     erbse (0.1.4)
       temple
     erubi (1.12.0)
-    escape_utils (1.2.2)
+    escape_utils (1.3.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -130,7 +123,7 @@ GEM
     irb (1.11.1)
       rdoc
       reline (>= 0.4.2)
-    kramdown (2.3.2)
+    kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -143,7 +136,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
-    method_source (1.0.0)
+    method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.21.2)
     mutex_m (0.2.0)
@@ -163,11 +156,15 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
-    papercraft (0.24)
-      escape_utils (~> 1.2.1)
-      kramdown (~> 2.3.1)
+    papercraft (1.2)
+      escape_utils (~> 1.3.0)
+      kramdown (~> 2.4.0)
       kramdown-parser-gfm (~> 1.1.0)
-      rouge (~> 3.27.0)
+      rouge (~> 4.1.3)
+    phlex (1.10.1)
+    phlex-rails (1.2.1)
+      phlex (~> 1.10.0)
+      railties (>= 6.1, < 8)
     psych (5.1.2)
       stringio
     racc (1.7.3)
@@ -213,9 +210,10 @@ GEM
       psych (>= 4.0.0)
     reline (0.4.2)
       io-console (~> 0.5)
-    rexml (3.2.5)
-    rouge (3.27.0)
+    rexml (3.2.6)
+    rouge (4.1.3)
     ruby2_keywords (0.0.5)
+    stackprof (0.2.26)
     stringio (3.1.0)
     temple (0.8.2)
     thor (1.3.0)
@@ -226,8 +224,8 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    view_component (2.71.0)
-      activesupport (>= 5.0.0, < 8.0)
+    view_component (3.12.1)
+      activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
     webrick (1.8.1)
@@ -248,12 +246,13 @@ DEPENDENCIES
   cells (~> 4.1.7)
   cells-erb (~> 0.1.0)
   cells-rails (~> 0.1.5)
-  dry-view
-  papercraft
-  phlex!
+  dry-view (= 0.7.1)
+  papercraft (= 1.2)
+  phlex-rails (= 1.2.1)
   rails (~> 7.1.3)
-  trailblazer-cells
-  view_component (~> 2.62)
+  stackprof (~> 0.2.26)
+  trailblazer-cells (~> 0.0.3)
+  view_component (~> 3.12.1)
 
 RUBY VERSION
    ruby 3.2.2p53
