@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 task :benchmark do
-  ruby "./benchmark.rb"
+  ruby './benchmark.rb'
 end

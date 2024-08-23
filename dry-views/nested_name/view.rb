@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "dry/view"
+require 'dry/view'
 
 module NestedName
   class View < Dry::View
     config.paths = [File.join(__dir__)]
-    config.template = "view"
+    config.template = 'view'
 
     expose :name
   end

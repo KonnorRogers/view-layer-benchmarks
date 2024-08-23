@@ -1,0 +1,13 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Lint/Debugger:
+  Enabled: true
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
