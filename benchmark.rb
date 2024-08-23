@@ -60,7 +60,7 @@ end
 
 Benchmark.ips do |x|
   x.time = 10
-  x.warmup = 2
+  x.warmup = 10
 
   x.report('view_component') { controller_view.render(NameComponent.new(name: 'Fox Mulder')) }
   x.report('partials') { controller_view.render('/name', name: 'Fox Mulder') }

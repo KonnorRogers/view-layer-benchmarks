@@ -5,7 +5,7 @@ class PhlexNameComponent < Phlex::HTML
     @name = name
   end
 
-  def template
+  def view_template
     h1 { "hello #{@name}" }
 
     50.times do

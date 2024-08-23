@@ -24,3 +24,6 @@ jobs:
 
       - name: Run benchmarks
         run: bundle exec rake benchmark
+
+      - name: Rubocop
+        run: bundle exec rubocop --parallel
