@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'pc_nested_name_component'
 
 PCNameComponent = ->(name) {

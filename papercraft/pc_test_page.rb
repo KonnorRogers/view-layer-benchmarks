@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'papercraft'
 require_relative 'pc_name_component'
 

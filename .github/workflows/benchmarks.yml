@@ -13,10 +13,6 @@ jobs:
   benchmarks:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        ruby: ['3.1']
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -24,8 +20,10 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
 
       - name: Run benchmarks
         run: bundle exec rake benchmark
+
+      - name: Rubocop
+        run: bundle exec rubocop --parallel

@@ -23,28 +23,33 @@ bundle install
 bundle exec rake benchmark
 ```
 
-Benchmarks are for Ruby 3.2.2 and Rails v7.1.
+Benchmarks are for Ruby 3.3.4 and Rails v7.2.
 
 ```
+ruby 3.3.4 (2024-07-09 revision be1089c8ec) +YJIT [x86_64-linux]
 Warming up --------------------------------------
-      view_component   906.000  i/100ms
-            partials   446.000  i/100ms
-               cells   498.000  i/100ms
-            dry_view    46.000  i/100ms
-               phlex     3.028k i/100ms
-          papercraft     1.730k i/100ms
+      view_component   634.000 i/100ms
+            partials   313.000 i/100ms
+               cells   237.000 i/100ms
+            dry_view    25.000 i/100ms
+               phlex   802.000 i/100ms
+          papercraft   908.000 i/100ms
+           ruby2html   756.000 i/100ms
 Calculating -------------------------------------
-      view_component      8.969k (± 0.6%) i/s -     89.694k in  10.000780s
-            partials      4.347k (± 2.0%) i/s -     43.708k in  10.058462s
-               cells      4.699k (± 3.1%) i/s -     47.310k in  10.078038s
-            dry_view    441.518  (± 2.3%) i/s -      4.416k in  10.007041s
-               phlex     28.745k (± 1.1%) i/s -    287.660k in  10.008481s
-          papercraft     16.392k (± 2.1%) i/s -    164.350k in  10.030574s
+      view_component      6.014k (± 6.6%) i/s -     60.230k in  10.070424s
+            partials      3.027k (± 4.9%) i/s -     30.361k in  10.055928s
+               cells      2.279k (± 6.2%) i/s -     22.752k in  10.023571s
+            dry_view    276.966 (± 8.3%) i/s -      2.750k in  10.013140s
+               phlex      8.484k (±12.2%) i/s -     83.408k in  10.026377s
+          papercraft      9.617k (± 5.5%) i/s -     96.248k in  10.043388s
+           ruby2html      7.945k (± 1.4%) i/s -     80.136k in  10.088139s
 
 Comparison:
-               phlex:    28745.1 i/s
-          papercraft:    16392.3 i/s - 1.75x  (± 0.00) slower
-      view_component:     8969.1 i/s - 3.20x  (± 0.00) slower
-               cells:     4699.0 i/s - 6.12x  (± 0.00) slower
-            partials:     4347.2 i/s - 6.61x  (± 0.00) slower
-            dry_view:      441.5 i/s - 65.11x  (± 0.00) slower```
+          papercraft:     9617.0 i/s
+               phlex:     8483.5 i/s - same-ish: difference falls within error
+           ruby2html:     7945.2 i/s - 1.21x  slower
+      view_component:     6013.8 i/s - 1.60x  slower
+            partials:     3027.1 i/s - 3.18x  slower
+               cells:     2279.3 i/s - 4.22x  slower
+            dry_view:      277.0 i/s - 34.72x  slower
+```
