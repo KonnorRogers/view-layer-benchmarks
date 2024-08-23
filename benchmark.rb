@@ -42,10 +42,12 @@ require_relative './phlex/phlex_nested_name_component'
 
 require_relative './papercraft/pc_test_page'
 
+require_relative './ruby2html/ruby2html_renderer'
+
 class BenchmarksController < ActionController::Base
 end
 
-BenchmarksController.view_paths = ['./partials']
+BenchmarksController.view_paths = %w[./partials ./ruby2html]
 controller_view = BenchmarksController.new.view_context
 
 class NameObj
@@ -66,6 +68,7 @@ Benchmark.ips do |x|
   x.report('dry_view') { controller_view.render(html: Name::View.new.call(name: 'Fox Mulder').to_s)  }
   x.report('phlex') { controller_view.render(PhlexNameComponent.new(name: 'Fox Mulder')) }
   x.report('papercraft') { controller_view.render(html: PCTestPage.new.call(name: 'Fox Mulder')) }
+  x.report('ruby2html') { controller_view.render(html: Ruby2htmlRenderer.render(name: 'Fox Mulder')) }
 
   x.compare!
 end

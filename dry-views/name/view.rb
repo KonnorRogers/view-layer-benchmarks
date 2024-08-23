@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+require_relative '../../patches/dry-configurable'
 require 'dry/view'
+require_relative '../../patches/dry-view'
 
 module Name
   class View < Dry::View
