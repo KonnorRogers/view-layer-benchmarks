@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "./renderers.rb"
+require './renderers.rb'
 
 Benchmark.ips do |x|
   x.time = 10
