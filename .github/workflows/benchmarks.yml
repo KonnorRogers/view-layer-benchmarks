@@ -23,7 +23,7 @@ jobs:
           bundler-cache: true
 
       - name: Run tests
-        run: rake test
+        run: bundle exec rake test
 
       - name: Run benchmarks
         run: bundle exec rake benchmark

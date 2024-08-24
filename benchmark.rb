@@ -2,20 +2,14 @@
 
 require "./renderers.rb"
 
-# Benchmark.ips do |x|
-#   x.time = 10
-#   x.warmup = 10
+Benchmark.ips do |x|
+  x.time = 10
+  x.warmup = 10
 
 
-#   Renderers.recursive_renderers.each do |renderer, render_function|
-#     x.report(renderer.to_s) { render_function.call() }
-#   end
+  Renderers.recursive_renderers.each do |renderer, render_function|
+    x.report(renderer.to_s) { render_function.call() }
+  end
 
-
-#   # x.hold! 'temp_results'
-#   x.compare!
-# end
-
-# File.write("trailblazer.html", Renderers.recursive_renderers[:trailblazer_cells].call())
-# File.write("dry-view.html", Renderers.recursive_renderers[:dry_view].call())
-File.write("phlex.html", Renderers.recursive_renderers[:phlex].call())
+  x.compare!
+end
