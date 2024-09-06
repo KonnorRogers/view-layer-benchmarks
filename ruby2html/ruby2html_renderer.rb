@@ -1,18 +1,35 @@
 # frozen_string_literal: true
 
-class Ruby2htmlRenderer
-  def self.render(name:)
-    Ruby2html::Render.new(nil) do
-      h1 "hello #{name}"
-      plain "\n"
+module Ruby2html
+  class NameComponent < ViewComponent::Base
+    include Ruby2html::ComponentHelper
 
-      # TODO: This should probably be a component to simulate loading another file.
-      50.times do
-        plain "\n  "
-        p "nested hello #{name}"
-        plain "\n"
+    def initialize(name:)
+      @name = name
+    end
+
+    def call
+      html do
+        h1 "hello #{@name}"
+
+        50.times do
+          render NestedNameComponent.new(name: @name)
+        end
       end
-      plain "\n"
-    end.render
+    end
+  end
+
+  class NestedNameComponent < ViewComponent::Base
+    include Ruby2html::ComponentHelper
+
+    def initialize(name:)
+      @name = name
+    end
+
+    def call
+      html do
+        p "nested hello #{@name}"
+      end
+    end
   end
 end

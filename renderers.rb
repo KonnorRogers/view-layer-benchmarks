@@ -71,7 +71,7 @@ module Renderers
       dry_view: proc { view_context.render(html: Name::View.new.call(name: 'Fox Mulder').to_s.html_safe) },
       phlex: proc { view_context.render(PhlexNameComponent.new(name: 'Fox Mulder')) },
       papercraft: proc { view_context.render(html: PCTestPage.new.call(name: 'Fox Mulder')).to_s },
-      ruby2html: proc { view_context.render(html: Ruby2htmlRenderer.render(name: 'Fox Mulder')) },
+      ruby2html: proc { view_context.render(Ruby2html::NameComponent.new(name: 'Fox Mulder')) },
     }
   end
 end
