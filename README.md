@@ -26,30 +26,30 @@ bundle exec rake benchmark
 Benchmarks are for Ruby 3.3.4 and Rails v7.2.
 
 ```
-ruby 3.3.4 (2024-07-09 revision be1089c8ec) +YJIT [x86_64-linux]
+ruby 3.3.5 (2024-09-03 revision ef084cc8f4) +YJIT [arm64-darwin23]
 Warming up --------------------------------------
-      view_component   634.000 i/100ms
-            partials   313.000 i/100ms
-               cells   237.000 i/100ms
-            dry_view    25.000 i/100ms
-               phlex   802.000 i/100ms
-          papercraft   908.000 i/100ms
-           ruby2html   756.000 i/100ms
+      view_component     1.708k i/100ms
+            partials   673.000 i/100ms
+   trailblazer_cells   653.000 i/100ms
+            dry_view    80.000 i/100ms
+               phlex     2.398k i/100ms
+          papercraft     2.596k i/100ms
+           ruby2html   399.000 i/100ms
 Calculating -------------------------------------
-      view_component      6.014k (± 6.6%) i/s -     60.230k in  10.070424s
-            partials      3.027k (± 4.9%) i/s -     30.361k in  10.055928s
-               cells      2.279k (± 6.2%) i/s -     22.752k in  10.023571s
-            dry_view    276.966 (± 8.3%) i/s -      2.750k in  10.013140s
-               phlex      8.484k (±12.2%) i/s -     83.408k in  10.026377s
-          papercraft      9.617k (± 5.5%) i/s -     96.248k in  10.043388s
-           ruby2html      7.945k (± 1.4%) i/s -     80.136k in  10.088139s
+      view_component     16.886k (± 1.5%) i/s -    169.092k in  10.016065s
+            partials      7.105k (± 2.2%) i/s -     71.338k in  10.045211s
+   trailblazer_cells      6.895k (± 2.2%) i/s -     69.218k in  10.044672s
+            dry_view    815.198 (± 1.3%) i/s -      8.160k in  10.011743s
+               phlex     25.010k (± 2.7%) i/s -    251.790k in  10.075228s
+          papercraft     25.500k (± 2.5%) i/s -    257.004k in  10.085609s
+           ruby2html      3.899k (± 2.4%) i/s -     39.102k in  10.035682s
 
 Comparison:
-          papercraft:     9617.0 i/s
-               phlex:     8483.5 i/s - same-ish: difference falls within error
-           ruby2html:     7945.2 i/s - 1.21x  slower
-      view_component:     6013.8 i/s - 1.60x  slower
-            partials:     3027.1 i/s - 3.18x  slower
-               cells:     2279.3 i/s - 4.22x  slower
-            dry_view:      277.0 i/s - 34.72x  slower
+          papercraft:    25499.6 i/s
+               phlex:    25010.2 i/s - same-ish: difference falls within error
+      view_component:    16885.8 i/s - 1.51x  slower
+            partials:     7105.3 i/s - 3.59x  slower
+   trailblazer_cells:     6894.7 i/s - 3.70x  slower
+           ruby2html:     3898.7 i/s - 6.54x  slower
+            dry_view:      815.2 i/s - 31.28x  slower
 ```
