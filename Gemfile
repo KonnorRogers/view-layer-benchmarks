@@ -15,7 +15,7 @@ gem 'trailblazer-cells', '~> 0.0.3'
 gem 'cells', '~> 4.1.7'
 gem 'cells-rails', '~> 0.1.5'
 gem 'cells-erb', '~> 0.1.0'
-gem 'dry-view', '~> 0.7.1', require: false
+gem 'hanami-view', '~> 2.2.0', require: false
 gem 'phlex-rails', '~> 1.2', '>= 1.2.1'
 gem 'papercraft', '~> 1.2'
 gem 'ruby2html', '~> 1.5', '>= 1.5.6'

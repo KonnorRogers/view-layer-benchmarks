@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../../patches/dry-configurable'
-require 'dry/view'
-require_relative '../../patches/dry-view'
+require 'hanami/view'
 
 module Name
-  class View < Dry::View
+  class View < Hanami::View
     config.paths = [File.join(__dir__)]
     config.template = 'view'
 

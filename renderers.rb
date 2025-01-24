@@ -17,8 +17,8 @@ require_relative './components/nested_name_component'
 require_relative './cells/name/cell'
 require_relative './cells/nested_name/cell'
 
-require_relative './dry-views/name/view'
-require_relative './dry-views/nested_name/view'
+require_relative './hanami-view/name/view'
+require_relative './hanami-view/nested_name/view'
 
 require_relative './phlex/phlex_name_component'
 require_relative './phlex/phlex_nested_name_component'
@@ -68,7 +68,7 @@ module Renderers
       view_component: proc { view_context.render(NameComponent.new(name: 'Fox Mulder')) },
       partials: proc { view_context.render('/name', name: 'Fox Mulder') },
       trailblazer_cells: proc { view_context.render(html: Name::Cell.new(NameObj.new('Fox Mulder')).().html_safe) },
-      dry_view: proc { view_context.render(html: Name::View.new.call(name: 'Fox Mulder').to_s.html_safe) },
+      hanami_view: proc { view_context.render(html: Name::View.new.call(name: 'Fox Mulder').to_s.html_safe) },
       phlex: proc { view_context.render(PhlexNameComponent.new(name: 'Fox Mulder')) },
       papercraft: proc { view_context.render(html: PCTestPage.new.call(name: 'Fox Mulder')).to_s },
       ruby2html: proc { view_context.render(html: Ruby2htmlRenderer.render(name: 'Fox Mulder')) },
