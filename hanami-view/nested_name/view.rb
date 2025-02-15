@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'dry/view'
+require 'hanami/view'
 
 module NestedName
-  class View < Dry::View
+  class View < Hanami::View
     config.paths = [File.join(__dir__)]
     config.template = 'view'
 
