@@ -1,7 +1,7 @@
 # Purpose
 
 To document performance of ViewComponent, Rails Partials,
-Dry-View, Trailblazer Cells, Papercraft and Phlex Components.
+Hanami View, Trailblazer Cells, Papercraft and Phlex Components.
 
 ## Benchmarks
 
