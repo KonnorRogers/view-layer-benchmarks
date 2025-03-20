@@ -3,6 +3,13 @@
 To document performance of ViewComponent, Rails Partials,
 Hanami View, Trailblazer Cells, Papercraft and Phlex Components.
 
+* ViewComponent: [viewcomponent.org](https://viewcomponent.org/)
+* Rails Partials: [guides.rubyonrails.org/layouts_and_rendering.html#using-partials](https://guides.rubyonrails.org/layouts_and_rendering.html#using-partials)
+* Hanami View: [guides.hanamirb.org/views/overview](https://guides.hanamirb.org/views/overview/)
+* Trailblazer Cells: [trailblazer.to/2.1/docs/cells](https://trailblazer.to/2.1/docs/cells/)
+* Papercraft: [github.com/digital-fabric/papercraft](https://github.com/digital-fabric/papercraft)
+* Phlex Components: [phlex.fun](https://www.phlex.fun/)
+
 ## Benchmarks
 
 Benchmarks arent representative of real life and just
