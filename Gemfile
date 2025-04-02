@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 3.3.4'
+ruby '~> 3.3.5'
 
 # Activate the gem you are reporting the issue against.
 gem 'rails', '~> 8.0'
