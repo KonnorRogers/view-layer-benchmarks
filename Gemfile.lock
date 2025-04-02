@@ -181,7 +181,7 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (0.27.0)
-    pry (0.14.2)
+    pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     psych (5.2.3)
@@ -309,6 +309,7 @@ PLATFORMS
   arm64-darwin-21
   arm64-darwin-22
   arm64-darwin-23
+  arm64-darwin-24
   x86_64-darwin-20
   x86_64-linux
 
@@ -319,14 +320,14 @@ DEPENDENCIES
   hanami-view
   papercraft
   phlex-rails
-  pry (~> 0.14.2)
+  pry
   rails (~> 8.0)
   rubocop-rails_config (~> 1.16)
   ruby2html
   view_component
 
 RUBY VERSION
-   ruby 3.3.4p94
+   ruby 3.4.1p0
 
 BUNDLED WITH
    2.5.11

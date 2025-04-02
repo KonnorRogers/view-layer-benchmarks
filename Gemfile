@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 3.3.5'
+ruby '~> 3.4'
 
 # Activate the gem you are reporting the issue against.
 gem 'rails', '~> 8.0'
@@ -19,4 +19,4 @@ gem 'papercraft'
 gem 'ruby2html'
 
 gem 'rubocop-rails_config', '~> 1.16'
-gem 'pry', '~> 0.14.2'
+gem 'pry'
