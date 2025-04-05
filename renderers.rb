@@ -59,7 +59,7 @@ module Renderers
   end
 
   def self.view_context
-    BenchmarksController.new.view_context
+    @_view_context ||= BenchmarksController.new.view_context
   end
 
   # A recursive render calls a "name" template 50 times and is fairly simple.

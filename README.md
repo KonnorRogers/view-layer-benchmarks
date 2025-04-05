@@ -20,37 +20,37 @@ other use-cases / view layers.
 git clone https://github.com/paramagicdev/view-layer-benchmarks.git
 cd view-layer-benchmarks
 bundle install
-bundle exec rake benchmark
+RAILS_ENV=production bundle exec rake benchmark
 ```
 
-Benchmarks are for Ruby 3.3.4 and Rails v7.2.
+Benchmarks are for Ruby 3.4.1 and Rails v8.0.
 
 **RE-RUN THESE BENCHMARKS** and run them
 ```
-ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x86_64-linux]
+ruby 3.4.1 (2024-12-25 revision 48d4efcb85) +YJIT +PRISM [arm64-darwin24]
 Warming up --------------------------------------
-      view_component   349.000 i/100ms
-            partials   162.000 i/100ms
-   trailblazer_cells   186.000 i/100ms
-         hanami_view    65.000 i/100ms
-               phlex   530.000 i/100ms
-          papercraft   729.000 i/100ms
-           ruby2html   476.000 i/100ms
+      view_component     1.872k i/100ms
+            partials     1.527k i/100ms
+   trailblazer_cells   566.000 i/100ms
+         hanami_view   231.000 i/100ms
+               phlex     2.059k i/100ms
+          papercraft     2.814k i/100ms
+           ruby2html     2.488k i/100ms
 Calculating -------------------------------------
-      view_component      3.463k (± 1.0%) i/s -     34.900k in  10.078636s
-            partials      1.649k (± 1.5%) i/s -     16.524k in  10.021468s
-   trailblazer_cells      1.875k (± 0.9%) i/s -     18.786k in  10.020889s
-         hanami_view    658.964 (± 1.1%) i/s -      6.630k in  10.062323s
-               phlex      5.341k (± 0.6%) i/s -     53.530k in  10.023603s
-          papercraft      7.332k (± 1.4%) i/s -     73.629k in  10.043922s
-           ruby2html      4.755k (± 2.1%) i/s -     47.600k in  10.015074s
+      view_component     18.445k (± 0.3%) i/s   (54.21 μs/i) -    185.328k in  10.047597s
+            partials     14.946k (± 0.6%) i/s   (66.91 μs/i) -    149.646k in  10.012969s
+   trailblazer_cells      5.597k (± 1.0%) i/s  (178.67 μs/i) -     56.034k in  10.012828s
+         hanami_view      2.325k (± 0.4%) i/s  (430.12 μs/i) -     23.331k in  10.035342s
+               phlex     20.551k (± 0.3%) i/s   (48.66 μs/i) -    205.900k in  10.018915s
+          papercraft     28.002k (± 0.4%) i/s   (35.71 μs/i) -    281.400k in  10.049340s
+           ruby2html     24.851k (± 0.3%) i/s   (40.24 μs/i) -    248.800k in  10.011760s
 
 Comparison:
-          papercraft:     7332.1 i/s
-               phlex:     5340.6 i/s - 1.37x  slower
-           ruby2html:     4755.4 i/s - 1.54x  slower
-      view_component:     3463.1 i/s - 2.12x  slower
-   trailblazer_cells:     1874.8 i/s - 3.91x  slower
-            partials:     1649.3 i/s - 4.45x  slower
-         hanami_view:      659.0 i/s - 11.13x  slower
+          papercraft:    28002.4 i/s
+           ruby2html:    24850.9 i/s - 1.13x  slower
+               phlex:    20551.4 i/s - 1.36x  slower
+      view_component:    18445.2 i/s - 1.52x  slower
+            partials:    14945.7 i/s - 1.87x  slower
+   trailblazer_cells:     5596.8 i/s - 5.00x  slower
+         hanami_view:     2324.9 i/s - 12.04x  slower
 ```
